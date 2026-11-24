@@ -11,14 +11,23 @@ img { max-width: 100%; }
 [hidden] { display: none !important; }
 </style>
 <title>株式会社筑糸建設</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Crect%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%229%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cpath%20d%3D%22M5%2020%20L20%207%20L35%2020%22%20fill%3D%22none%22%20stroke%3D%22%23648B45%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M10%2018%20V33%20H30%20V18%22%20fill%3D%22none%22%20stroke%3D%22%23648B45%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2033%20V25%20H24%20V33%22%20fill%3D%22%23EEEFAF%22%20stroke%3D%22%23648B45%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#648B45">
+<meta property="og:type" content="website">
+<meta property="og:title" content="株式会社筑糸建設｜福岡の学校・福祉施設・解体工事">
+<meta property="og:description" content="福岡市中央区の建設会社。学校工事・社会福祉施設の新築・解体工事・改修工事など、建築一式工事を行っています。">
+<meta property="og:url" content="https://iwamoto-png.github.io/chikushi-kensetsu.github.io/">
+<meta property="og:image" content="https://iwamoto-png.github.io/chikushi-kensetsu.github.io/img/hero-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
 <style>
-/* Layout: 方眼紙の地に、波形フチの写真と縦書きコピー。英字見出し＋小さな和文。ボタンは珊瑚色の丸いピルに統一し、ヘッダーとスマホ下部に常に表示。 */
+/* Layout: 白い地に角丸の飾り。写真は淡い色のフチの角丸フレーム。英字見出し＋小さな和文。ボタンは濃い緑の丸いピルに統一し、ヘッダーとスマホ下部に常に表示。 */
 /* 指定カラー：#648B45 / #9ABE74 / #A6CEC1 / #68BC83 / #EEEFAF */
 :root {
-  --bg: #FAFBF3;
+  --bg: #FFFFFF;         /* 背景は白 */
+  --frame: #FAFBF3;      /* 写真のフチ（以前の背景色） */
   --grid: #E1EDE7;       /* #A6CEC1 をうすく */
   --surface: #FFFFFF;
   --fg: #2E3A27;
@@ -43,7 +52,7 @@ img { max-width: 100%; }
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #151B12; --grid: #1E271B; --surface: #1C2519; --fg: #E8EEE1; --muted: #A9B7A0;
+    --bg: #151B12; --grid: #1E271B; --surface: #1C2519; --frame: #212B1E; --fg: #E8EEE1; --muted: #A9B7A0;
     --teal: #B4D294; --teal-deep: #C3DCA8; --mint: #5D7F43; --mint-soft: #223024; --sage: #4F7A6C;
     --panel: #22261A; --pink: #7FCB96; --yellow: #EEEFAF; --on-mint: #F1F6EA;
     --line: #2F3B2A; --cta: #9ABE74; --cta-hover: #ADCB8C; --on-cta: #1A2512; --shadow: rgba(0, 0, 0, .35);
@@ -51,7 +60,7 @@ img { max-width: 100%; }
   }
 }
 :root[data-theme="dark"] {
-  --bg: #151B12; --grid: #1E271B; --surface: #1C2519; --fg: #E8EEE1; --muted: #A9B7A0;
+  --bg: #151B12; --grid: #1E271B; --surface: #1C2519; --frame: #212B1E; --fg: #E8EEE1; --muted: #A9B7A0;
   --teal: #B4D294; --teal-deep: #C3DCA8; --mint: #5D7F43; --mint-soft: #223024; --sage: #4F7A6C;
   --panel: #22261A; --pink: #7FCB96; --yellow: #EEEFAF; --on-mint: #F1F6EA;
   --line: #2F3B2A; --cta: #9ABE74; --cta-hover: #ADCB8C; --on-cta: #1A2512; --shadow: rgba(0, 0, 0, .35);
@@ -63,10 +72,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   background-color: var(--bg);
-  background-image:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 28px 28px;
   color: var(--fg);
   font-family: var(--jp); font-size: 16.5px; line-height: 2; letter-spacing: .06em;
 }
@@ -102,9 +107,9 @@ section > .wrap, section > .panel-wrap { position: relative; z-index: 1; }
 .ttl.left { justify-items: start; text-align: left; }
 
 /* 写真フレーム：白いフチの角丸＋軽い影（サイト全体で共通） */
-.wf { background: var(--surface); padding: 10px; border-radius: 22px; box-shadow: 0 10px 28px var(--shadow); }
+.wf { background: var(--frame); padding: 10px; border-radius: 22px; border: 1px solid var(--line); box-shadow: 0 10px 28px var(--shadow); }
 .wf > img, .wf > .wf-in { width: 100%; border-radius: 14px; overflow: hidden; }
-.wf-mint { background: var(--mint); border: 10px solid var(--surface); border-radius: 22px; box-shadow: 0 10px 28px var(--shadow); }
+.wf-mint { background: var(--mint); border: 10px solid var(--frame); outline: 1px solid var(--line); border-radius: 22px; box-shadow: 0 10px 28px var(--shadow); }
 
 /* ボタン */
 .btn {
@@ -126,6 +131,7 @@ header.site {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9;
   background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
 }
 .head-row { display: flex; align-items: center; gap: 20px; min-height: 84px; }
 .gnav { display: flex; gap: 26px; font-family: var(--en); font-size: .8rem; font-weight: 500; letter-spacing: .14em; }
@@ -230,7 +236,7 @@ a.apic:hover span { color: var(--cta); border-color: var(--cta); }
 @media (prefers-reduced-motion: reduce) { a.apic .wf { transition: none; } }
 .proj { scroll-margin-top: 110px; }
 .about h2 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); color: var(--teal); line-height: 2.2; letter-spacing: .12em; margin-bottom: 26px; }
-.about h2 span { background: var(--surface); padding: 4px 10px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.about h2 span { background: var(--mint-soft); padding: 4px 10px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .about p { color: var(--teal-deep); font-size: .95rem; }
 .about p + p { margin-top: 16px; }
 .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
@@ -275,7 +281,7 @@ a.apic:hover span { color: var(--cta); border-color: var(--cta); }
 .proj > * { min-width: 0; }
 .proj-photos { display: grid; gap: 12px; }
 /* 大きい写真は切り取らずに全体を表示する */
-.proj-frame { background: var(--surface); padding: 10px; border-radius: 22px; box-shadow: 0 10px 28px var(--shadow); }
+.proj-frame { background: var(--frame); padding: 10px; border-radius: 22px; border: 1px solid var(--line); box-shadow: 0 10px 28px var(--shadow); }
 .proj-main { width: 100%; height: auto; border-radius: 14px; }
 .thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
 .thumbs button { padding: 0; border: 3px solid transparent; border-radius: 12px; overflow: hidden; cursor: pointer; background: none; }
@@ -360,7 +366,7 @@ a.apic:hover span { color: var(--cta); border-color: var(--cta); }
 /* 会社概要は白い角丸カードにのせて、背景の方眼や飾りと重ならないようにする */
 .company {
   max-width: 880px; margin: 0 auto;
-  background: var(--surface); border-radius: 22px; padding: 20px 44px 36px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 20px 44px 36px;
   box-shadow: 0 10px 28px var(--shadow);
 }
 .company > * { min-width: 0; }
