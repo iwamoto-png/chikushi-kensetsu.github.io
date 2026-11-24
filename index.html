@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="福岡市中央区の建設会社、株式会社筑糸建設。学校工事・社会福祉施設の新築・解体工事・改修工事など、建築一式工事を行っています。">
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<title>株式会社筑糸建設</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<style>
+/* Layout: 方眼紙の地に、波形フチの写真と縦書きコピー。英字見出し＋小さな和文。ボタンは珊瑚色の丸いピルに統一し、ヘッダーとスマホ下部に常に表示。 */
+/* 指定カラー：#648B45 / #9ABE74 / #A6CEC1 / #68BC83 / #EEEFAF */
+:root {
+  --bg: #FAFBF3;
+  --grid: #E1EDE7;       /* #A6CEC1 をうすく */
+  --surface: #FFFFFF;
+  --fg: #2E3A27;
+  --muted: #5D6B55;
+  --teal: #648B45;       /* 見出し・英字（指定色） */
+  --teal-deep: #4D6E33;  /* 小さな文字用に #648B45 を少し濃く */
+  --mint: #9ABE74;       /* カードや写真の地（指定色） */
+  --mint-soft: #E4F0EA;  /* #A6CEC1 の淡色 */
+  --sage: #A6CEC1;       /* 指定色 */
+  --panel: #F6F7DC;      /* #EEEFAF の淡いパネル */
+  --pink: #68BC83;       /* 差し色（指定色） */
+  --yellow: #EEEFAF;     /* アクセント（指定色） */
+  --on-mint: #26371B;
+  --line: #DCE6D5;
+  --cta: #557A39;        /* ボタン専用：#648B45 を白文字が読める濃さに */
+  --cta-hover: #46672E;
+  --on-cta: #FFFFFF;
+  --shadow: rgba(77, 110, 51, .14);
+  --en: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --jp: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151B12; --grid: #1E271B; --surface: #1C2519; --fg: #E8EEE1; --muted: #A9B7A0;
+    --teal: #B4D294; --teal-deep: #C3DCA8; --mint: #5D7F43; --mint-soft: #223024; --sage: #4F7A6C;
+    --panel: #22261A; --pink: #7FCB96; --yellow: #EEEFAF; --on-mint: #F1F6EA;
+    --line: #2F3B2A; --cta: #9ABE74; --cta-hover: #ADCB8C; --on-cta: #1A2512; --shadow: rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151B12; --grid: #1E271B; --surface: #1C2519; --fg: #E8EEE1; --muted: #A9B7A0;
+  --teal: #B4D294; --teal-deep: #C3DCA8; --mint: #5D7F43; --mint-soft: #223024; --sage: #4F7A6C;
+  --panel: #22261A; --pink: #7FCB96; --yellow: #EEEFAF; --on-mint: #F1F6EA;
+  --line: #2F3B2A; --cta: #9ABE74; --cta-hover: #ADCB8C; --on-cta: #1A2512; --shadow: rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--fg);
+  font-family: var(--jp); font-size: 16.5px; line-height: 2; letter-spacing: .06em;
+}
+h1, h2, h3 { line-height: 1.5; text-wrap: balance; margin: 0; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--teal); }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 3px solid var(--cta); outline-offset: 3px; border-radius: 6px; }
+
+.wrap {
+  max-width: var(--wrap); margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+section { padding-block: 88px; position: relative; }
+main { overflow-x: clip; }
+section > .wrap, section > .panel-wrap { position: relative; z-index: 1; }
+
+/* 角丸の飾り（45度に傾けた角丸四角の群れ）。JSで各セクションの角に生成 */
+.deco { position: absolute; width: min(46vw, 400px); height: auto; pointer-events: none; z-index: 0; opacity: .9; }
+.deco-tl { top: 0; left: 0; }
+.deco-tr { top: 0; right: 0; }
+.deco-bl { bottom: 0; left: 0; }
+.deco-br { bottom: 0; right: 0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .deco { opacity: .4; } }
+:root[data-theme="dark"] .deco { opacity: .4; }
+@media (max-width: 700px) { .deco { width: 62vw; opacity: .6; } }
+
+/* 英字見出し */
+.ttl { display: grid; gap: 2px; justify-items: center; text-align: center; margin-bottom: 48px; }
+.ttl .en { font-family: var(--en); font-weight: 500; font-size: clamp(1.7rem, 3.6vw, 2.2rem); letter-spacing: .14em; color: var(--teal); line-height: 1.3; }
+.ttl .ja { font-size: .82rem; color: var(--teal-deep); letter-spacing: .12em; }
+.ttl.left { justify-items: start; text-align: left; }
+
+/* 写真フレーム：白いフチの角丸＋軽い影（サイト全体で共通） */
+.wf { background: var(--surface); padding: 10px; border-radius: 22px; box-shadow: 0 10px 28px var(--shadow); }
+.wf > img, .wf > .wf-in { width: 100%; border-radius: 14px; overflow: hidden; }
+.wf-mint { background: var(--mint); border: 10px solid var(--surface); border-radius: 22px; box-shadow: 0 10px 28px var(--shadow); }
+
+/* ボタン */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 58px; padding: 0 30px; border-radius: 999px;
+  font-family: var(--jp); font-size: 1.05rem; font-weight: 700; letter-spacing: .08em; text-decoration: none;
+  border: 2px solid transparent; cursor: pointer; transition: background .15s, transform .1s;
+}
+.btn:active { transform: translateY(1px); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+.btn-cta { background: var(--cta); color: var(--on-cta); box-shadow: 0 4px 0 color-mix(in srgb, var(--cta) 60%, #000); }
+.btn-cta:hover { background: var(--cta-hover); }
+.btn-line { background: var(--surface); color: var(--teal); border-color: var(--teal); }
+.btn-line:hover { background: var(--mint-soft); }
+
+/* ヘッダー */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+header.site {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(6px);
+}
+.head-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; min-height: 84px; }
+.gnav { display: flex; gap: 26px; font-family: var(--en); font-size: .8rem; font-weight: 500; letter-spacing: .14em; }
+.gnav a { color: var(--teal); text-decoration: none; display: grid; line-height: 1.35; text-align: center; }
+.gnav a small { font-family: var(--jp); font-size: .66rem; color: var(--muted); letter-spacing: .08em; }
+.gnav a:hover { color: var(--cta); }
+.gnav.l { justify-content: flex-end; }
+.logo { display: grid; justify-items: center; text-decoration: none; color: var(--fg); line-height: 1.2; }
+.logo svg { width: 38px; height: 38px; }
+.logo small { font-size: .62rem; letter-spacing: .2em; color: var(--muted); margin-top: 2px; }
+.logo strong { font-size: 1.15rem; letter-spacing: .16em; color: var(--teal); }
+.head-r { display: flex; align-items: center; gap: 22px; }
+.head-r .btn { min-height: 48px; padding: 0 22px; font-size: .95rem; }
+.head-tel { display: grid; line-height: 1.3; text-align: right; }
+.head-tel small { font-size: .66rem; color: var(--muted); }
+.head-tel b { font-family: var(--en); font-weight: 600; font-size: 1.1rem; color: var(--teal); letter-spacing: .06em; }
+@media (max-width: 1100px) { .head-r .gnav, .head-tel { display: none; } }
+@media (max-width: 860px) {
+  .head-row { grid-template-columns: auto 1fr; min-height: 68px; }
+  .gnav.l { display: none; }
+  .logo { justify-items: start; grid-template-columns: auto auto; column-gap: 10px; align-items: center; }
+  .logo svg { grid-row: span 2; }
+  .head-r { justify-content: flex-end; }
+}
+@media (max-width: 520px) { .head-r .btn { display: none; } }
+
+/* ヒーロー */
+.hero { padding-block: 12px 56px; }
+.hero-frame { position: relative; }
+.hero-frame .wf { padding: 12px; }
+.slides { position: relative; aspect-ratio: 16 / 8.2; background: var(--mint); }
+.slide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1s ease; }
+.slide.on { opacity: 1; }
+.slide img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, center); transform: scale(1.04); transition: transform 7s ease-out; }
+.slide.on img { transform: scale(1); }
+@media (prefers-reduced-motion: reduce) { .slide, .slide img { transition: none; transform: none; } }
+.slide-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; margin-top: 14px; }
+.slide-cap { color: var(--teal); font-size: .92rem; letter-spacing: .08em; display: flex; align-items: center; gap: 12px; min-width: 0; }
+.slide-cap span { font-family: var(--en); font-size: .7rem; letter-spacing: .2em; color: var(--pink); }
+.slide-ctrl { display: flex; align-items: center; gap: 10px; }
+.sbtn { width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--teal); background: var(--surface); color: var(--teal); display: grid; place-items: center; cursor: pointer; padding: 0; }
+.sbtn:hover { background: var(--mint-soft); }
+.sbtn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+#s-pause .i-play { display: none; fill: currentColor; stroke: none; }
+#s-pause.paused .i-play { display: block; }
+#s-pause.paused .i-pause { display: none; }
+.dots { display: flex; gap: 8px; padding-inline: 4px; }
+.dots button { width: 12px; height: 12px; border-radius: 50%; border: 0; padding: 0; background: var(--sage); cursor: pointer; transition: width .2s, background .2s; }
+.dots button[aria-current="true"] { width: 30px; border-radius: 999px; background: var(--teal); }
+/* 写真の上の文章：フレームと同じ白い角丸カード＋軽い影 */
+.hero-copy {
+  position: absolute; top: 9%; left: 4.5%; max-width: 72%;
+  color: var(--teal); font-size: clamp(1.2rem, 2.7vw, 2.1rem); font-weight: 700;
+  letter-spacing: .14em; line-height: 2.15;
+}
+.hc-en {
+  display: table; margin-bottom: 12px; padding: 3px 14px; border-radius: 999px;
+  background: var(--yellow); color: #4D6E33;
+  font-family: var(--en); font-size: .72rem; font-weight: 600; letter-spacing: .3em; line-height: 1.8;
+  box-shadow: 0 6px 16px var(--shadow);
+}
+.hc-line {
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  padding: .18em .55em; border-radius: 8px;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+  box-shadow: 0 8px 22px var(--shadow);
+}
+.hero-list {
+  position: absolute; left: 4.5%; bottom: 8%;
+  display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; max-width: 60%;
+}
+.hero-list li {
+  background: color-mix(in srgb, var(--surface) 93%, transparent); color: var(--teal);
+  border-radius: 999px; padding: 6px 18px; font-size: clamp(.82rem, 1.3vw, .95rem); font-weight: 700; letter-spacing: .1em;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+.hero-list li::before { content: "✓"; color: var(--cta); margin-right: 6px; }
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 30px; }
+.hero-actions .btn { min-height: 64px; font-size: 1.1rem; padding: 0 36px; }
+@media (max-width: 700px) {
+  .slides { aspect-ratio: 4 / 5; }
+  .slide img { object-position: var(--mpos, center); }
+  .slide-bar { justify-content: center; }
+  .slide-cap { width: 100%; justify-content: center; }
+  .hero-copy { top: 6%; left: 6%; right: 6%; max-width: none; font-size: 1.12rem; letter-spacing: .1em; line-height: 2.25; }
+  .hc-en { margin-bottom: 8px; font-size: .62rem; }
+  .hero-list { bottom: 6%; left: 6%; right: 6%; max-width: none; }
+  .hero-list li { padding: 4px 14px; }
+  .hero-actions .btn { flex: 1 1 100%; }
+}
+
+/* ABOUT */
+.about { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; }
+.about > * { min-width: 0; }
+.about-pics { position: relative; display: grid; gap: 18px; }
+.apic { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 14px; }
+.apic:nth-child(2) { margin-left: 14%; }
+.apic:nth-child(3) { margin-left: 28%; }
+.apic .wf { padding: 6px; }
+.apic img { aspect-ratio: 4 / 3; object-fit: cover; }
+.apic span { font-family: var(--en); font-size: .7rem; letter-spacing: .16em; color: var(--teal); border-bottom: 1px solid var(--teal); padding-bottom: 2px; justify-self: start; white-space: nowrap; display: grid; line-height: 1.6; }
+.apic span small { font-family: var(--jp); font-size: .72rem; letter-spacing: .06em; color: var(--teal-deep); font-weight: 700; }
+a.apic { text-decoration: none; border-radius: 22px; }
+a.apic .wf { transition: transform .2s, box-shadow .2s; }
+a.apic:hover .wf, a.apic:focus-visible .wf { transform: translateY(-4px); box-shadow: 0 14px 30px var(--shadow); }
+a.apic:hover span { color: var(--cta); border-color: var(--cta); }
+@media (prefers-reduced-motion: reduce) { a.apic .wf { transition: none; } }
+.proj { scroll-margin-top: 110px; }
+.about h2 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); color: var(--teal); line-height: 2.2; letter-spacing: .12em; margin-bottom: 26px; }
+.about h2 span { background: var(--surface); padding: 4px 10px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.about p { color: var(--teal-deep); font-size: .95rem; }
+.about p + p { margin-top: 16px; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+.fact { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 10px; text-align: center; display: grid; line-height: 1.5; }
+.fact b { font-family: var(--en); font-weight: 600; font-size: 1.7rem; color: var(--teal); letter-spacing: .02em; }
+.fact b small { font-family: var(--jp); font-size: .8rem; margin-left: 2px; }
+.fact span { font-size: .76rem; color: var(--muted); letter-spacing: .04em; }
+@media (max-width: 860px) {
+  .about { grid-template-columns: 1fr; gap: 36px; }
+  .apic { grid-template-columns: 120px 1fr; }
+}
+
+/* ABOUTとSERVICEの間：5色の街並みイラスト（文字なし） */
+.town { margin-top: -28px; margin-bottom: 36px; }
+.town svg { display: block; width: 100%; height: auto; }
+@media (max-width: 700px) { .town { margin-top: -40px; margin-bottom: 24px; } .town svg { width: 140%; margin-left: -20%; } }
+
+/* ピンクのパネル */
+.panel { background: var(--panel); border-radius: 48px; padding-block: 80px; overflow: hidden; }
+.panel-wrap { max-width: calc(var(--wrap) + 80px); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (max-width: 700px) { .panel { border-radius: 28px; padding-block: 60px; } }
+
+/* SERVICE */
+.services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+.svc { display: grid; gap: 14px; align-content: start; }
+.svc-pic { position: relative; aspect-ratio: 5 / 4; display: grid; place-items: center; }
+.svc-pic svg.ic { width: 46%; height: auto; }
+.svc-num { position: absolute; top: 9%; left: 8%; font-family: var(--en); font-size: 1.1rem; color: var(--on-mint); letter-spacing: .1em; line-height: 1; }
+.svc-en { position: absolute; top: 24%; left: 8.5%; writing-mode: vertical-rl; font-family: var(--en); font-size: .56rem; color: var(--on-mint); letter-spacing: .2em; opacity: .85; }
+.svc h3 { text-align: center; font-size: 1.08rem; color: var(--teal); letter-spacing: .12em; }
+.svc p { font-size: .9rem; color: var(--teal-deep); line-height: 1.95; }
+.svc ul { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.svc li { font-size: .74rem; padding: 0 10px; border-radius: 999px; background: var(--surface); color: var(--teal); border: 1px solid var(--line); }
+@media (max-width: 960px) { .services { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .services { grid-template-columns: 1fr; } }
+
+/* WORKS */
+.projects { display: grid; gap: 64px; }
+.proj { display: grid; grid-template-columns: 1.7fr 1fr; gap: 44px; align-items: center; }
+.proj:nth-child(even) { grid-template-columns: 1fr 1.7fr; }
+.proj:nth-child(even) .proj-photos { order: 2; }
+.proj > * { min-width: 0; }
+.proj-photos { display: grid; gap: 12px; }
+/* 大きい写真は切り取らずに全体を表示する */
+.proj-frame { background: var(--surface); padding: 10px; border-radius: 22px; box-shadow: 0 10px 28px var(--shadow); }
+.proj-main { width: 100%; height: auto; border-radius: 14px; }
+.thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.thumbs button { padding: 0; border: 3px solid transparent; border-radius: 12px; overflow: hidden; cursor: pointer; background: none; }
+.thumbs button img { width: 100%; aspect-ratio: 1; object-fit: cover; opacity: .7; transition: opacity .15s; }
+.thumbs button:hover img, .thumbs button.on img { opacity: 1; }
+.thumbs button.on { border-color: var(--cta); }
+.proj-body { display: grid; gap: 12px; align-content: center; }
+.proj-no { font-family: var(--en); color: var(--pink); font-size: 2.6rem; font-weight: 500; line-height: 1; letter-spacing: .06em; }
+.proj-body .tag { font-size: .8rem; color: var(--teal); letter-spacing: .12em; }
+.proj-body h3 { font-size: 1.3rem; color: var(--fg); letter-spacing: .08em; }
+.proj-body p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 860px) {
+  .proj, .proj:nth-child(even) { grid-template-columns: 1fr; gap: 20px; }
+  .proj:nth-child(even) .proj-photos { order: 0; }
+  .thumbs { grid-template-columns: repeat(4, 1fr); }
+}
+
+.worklist { margin-top: 80px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 48px; }
+.wl-group { min-width: 0; margin-bottom: 26px; }
+.wl-group h3 { font-size: .98rem; color: var(--teal); letter-spacing: .12em; margin-bottom: 4px; display: flex; gap: 10px; align-items: baseline; }
+.wl-group h3::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--pink); flex: none; align-self: center; }
+.wl-group ul { list-style: none; margin: 0; padding: 0; }
+.wl-group li { padding: 9px 0 9px 20px; border-bottom: 1px solid var(--line); font-size: .92rem; }
+@media (max-width: 760px) { .worklist { grid-template-columns: 1fr; } }
+
+/* FLOW */
+.flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; counter-reset: step; }
+.flow li { position: relative; display: grid; justify-items: center; text-align: center; gap: 6px; align-content: start; }
+/* 手順のピクトグラム：白い丸に黄緑のフチ、線は濃い緑 */
+.flow-ic {
+  width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--surface); border: 4px solid var(--mint); box-shadow: 0 8px 20px var(--shadow);
+  position: relative; z-index: 1;
+}
+.flow-ic svg { width: 62%; height: auto; overflow: visible; }
+.flow-ic .s { fill: none; stroke: var(--teal-deep); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.flow-ic .s.thin { stroke-width: 2.6; }
+.flow-ic .f-m, .flow-ic .f-y, .flow-ic .f-w { stroke: var(--teal-deep); stroke-width: 3; stroke-linejoin: round; }
+.flow-ic .f-m { fill: var(--mint); }
+.flow-ic .f-y { fill: var(--yellow); }
+.flow-ic .f-w { fill: var(--surface); }
+.flow-ic .f-d { fill: var(--teal-deep); }
+/* 手順をつなぐ点線 */
+.flow li:not(:last-child)::after {
+  content: ""; position: absolute; top: 48px; left: calc(50% + 56px); right: calc(-50% + 48px);
+  border-top: 3px dotted var(--mint);
+}
+.flow-no { font-family: var(--en); font-size: .72rem; font-weight: 600; letter-spacing: .2em; color: var(--pink); margin-top: 8px; }
+.flow h3 { font-size: 1rem; color: var(--teal); letter-spacing: .1em; margin-top: 6px; }
+.flow p { font-size: .86rem; color: var(--muted); line-height: 1.8; }
+@media (max-width: 860px) {
+  .flow { grid-template-columns: 1fr; gap: 18px; }
+  .flow li { grid-template-columns: 76px 1fr; justify-items: start; text-align: left; column-gap: 18px; row-gap: 2px; }
+  .flow-ic { width: 72px; height: 72px; grid-row: span 3; border-width: 3px; }
+  .flow-no { margin-top: 4px; }
+  .flow li:not(:last-child)::after { top: 78px; left: 36px; right: auto; height: calc(100% - 60px); border-top: 0; border-left: 3px dotted var(--mint); }
+}
+
+/* STAFF */
+.engineers { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.eng { background: var(--surface); border-radius: 20px; padding: 22px 12px; text-align: center; display: grid; gap: 6px; border: 1px solid var(--line); }
+.eng .q { font-size: .72rem; color: var(--teal-deep); background: var(--mint-soft); border-radius: 999px; padding: 2px 10px; justify-self: center; letter-spacing: .04em; }
+.eng b { font-size: 1.1rem; letter-spacing: .14em; font-weight: 500; }
+@media (max-width: 960px) { .engineers { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 440px) { .engineers { grid-template-columns: 1fr; } }
+
+/* CTA */
+.cta-box { position: relative; text-align: center; padding: 56px 24px; display: grid; gap: 18px; justify-items: center; }
+.cta-box h2 { color: var(--on-mint); font-size: clamp(1.25rem, 2.8vw, 1.7rem); letter-spacing: .14em; }
+.cta-box p { color: var(--on-mint); font-size: .95rem; }
+.cta-box .en { font-family: var(--en); font-size: .78rem; letter-spacing: .3em; color: var(--on-mint); background: var(--yellow); padding: 2px 14px; border-radius: 999px; }
+:root[data-theme="dark"] .cta-box .en { color: #26371B; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cta-box .en { color: #26371B; } }
+.cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; align-items: center; margin-top: 6px; }
+.cta-tel { background: var(--surface); border-radius: 999px; padding: 8px 30px; display: grid; line-height: 1.4; }
+.cta-tel small { font-size: .7rem; color: var(--muted); }
+.cta-tel b { font-family: var(--en); font-weight: 600; font-size: 1.45rem; color: var(--teal); letter-spacing: .06em; }
+.cta-row .btn { min-height: 62px; }
+@media (max-width: 560px) { .cta-row > * { flex: 1 1 100%; } }
+
+/* COMPANY */
+/* 会社概要は白い角丸カードにのせて、背景の方眼や飾りと重ならないようにする */
+.company {
+  max-width: 880px; margin: 0 auto;
+  background: var(--surface); border-radius: 22px; padding: 20px 44px 36px;
+  box-shadow: 0 10px 28px var(--shadow);
+}
+.company > * { min-width: 0; }
+dl.info { margin: 0; display: grid; }
+dl.info div { display: grid; grid-template-columns: 10em 1fr; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+dl.info dt { font-size: .88rem; font-weight: 700; color: var(--teal-deep); letter-spacing: .1em; }
+dl.info dd { margin: 0; font-size: .95rem; color: var(--fg); overflow-wrap: anywhere; }
+dd .kinds { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+dd .kinds span { font-size: .74rem; padding: 0 10px; border-radius: 999px; background: var(--mint-soft); color: var(--teal); }
+.access { margin-top: 28px; padding: 26px 20px 4px; border-radius: 16px; background: var(--mint-soft); display: grid; justify-items: center; text-align: center; }
+.access-txt { display: grid; gap: 10px; justify-items: center; }
+.access-txt h3 { font-family: var(--en); font-weight: 500; letter-spacing: .14em; color: var(--teal); font-size: 1.1rem; }
+.access-txt p { font-size: .92rem; color: var(--muted); }
+@media (max-width: 860px) {
+  dl.info div { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
+  .company { padding: 8px 20px 22px; border-radius: 18px; }
+}
+
+/* CONTACT */
+.contact { display: grid; grid-template-columns: 1fr 1.5fr; gap: 44px; }
+/* 公開版：フォームなし。電話・FAXを中央に大きく */
+.contact.contact-simple { grid-template-columns: 1fr; gap: 24px; max-width: 720px; margin: 0 auto; justify-items: center; text-align: center; }
+.contact-lead { color: var(--teal-deep); font-size: .98rem; }
+.contact-simple .contact-side { grid-template-columns: 1fr 1fr; gap: 18px; width: 100%; }
+.contact-simple .contact-card { justify-items: center; padding: 26px 22px; }
+.contact-simple .contact-card b { font-size: 1.9rem; }
+.contact-simple .copy-btn { justify-self: center; }
+@media (max-width: 600px) { .contact-simple .contact-side { grid-template-columns: 1fr; } .contact-lead br { display: none; } }
+.contact > * { min-width: 0; }
+.contact-side { display: grid; gap: 16px; align-content: start; }
+.contact-card { background: var(--surface); border-radius: 20px; padding: 20px 22px; display: grid; gap: 2px; }
+.contact-card small { color: var(--muted); font-size: .8rem; }
+.contact-card b { font-family: var(--en); font-weight: 600; font-size: 1.5rem; color: var(--teal); letter-spacing: .05em; }
+.copy-btn { justify-self: start; margin-top: 8px; font: inherit; font-size: .8rem; padding: 4px 16px; border-radius: 999px; border: 1px solid var(--teal); background: var(--surface); color: var(--teal); cursor: pointer; }
+form.inq { display: grid; gap: 20px; background: var(--surface); border-radius: 24px; padding: 32px; }
+.field { display: grid; gap: 6px; }
+.field label, .field legend { font-weight: 700; font-size: .95rem; color: var(--teal); letter-spacing: .08em; }
+.req { font-size: .7rem; color: var(--on-cta); background: var(--cta); padding: 1px 10px; border-radius: 999px; margin-left: 8px; vertical-align: 2px; }
+.field input, .field textarea {
+  font: inherit; font-size: 1rem; padding: 13px 16px; border-radius: 12px;
+  border: 2px solid var(--line); background: var(--bg); color: var(--fg); width: 100%;
+}
+.field input:focus, .field textarea:focus { border-color: var(--teal); outline: none; }
+.field textarea { min-height: 140px; resize: vertical; }
+fieldset.field { border: 0; padding: 0; margin: 0; }
+.choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.choices label { display: flex; align-items: center; gap: 8px; font-weight: 500; color: var(--fg); border: 2px solid var(--line); border-radius: 999px; padding: 6px 16px; cursor: pointer; background: var(--bg); letter-spacing: .04em; }
+.choices input { width: 18px; height: 18px; accent-color: var(--teal); }
+.choices label:has(input:checked) { border-color: var(--teal); background: var(--mint-soft); }
+.err { color: var(--cta); font-size: .9rem; }
+form.inq .btn { min-height: 64px; font-size: 1.1rem; width: 100%; }
+.done { background: var(--surface); border: 2px solid var(--teal); border-radius: 24px; padding: 28px; display: grid; gap: 8px; }
+.done h3 { color: var(--teal); }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr; } form.inq { padding: 22px 18px; } }
+
+/* フッター */
+footer.site { padding-block: 40px; text-align: center; color: var(--muted); font-size: .82rem; display: grid; gap: 6px; }
+footer.site { position: relative; overflow: hidden; }
+footer.site > :not(.deco) { position: relative; z-index: 1; }
+footer.site strong { color: var(--teal); letter-spacing: .16em; font-size: 1rem; }
+
+/* トップに戻るボタン（控えめな小さい丸） */
+.to-top {
+  position: fixed; z-index: 15;
+  right: max(18px, calc(env(safe-area-inset-right, 0px) + 12px));
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  width: 46px; height: 46px; border-radius: 50%; padding: 0; cursor: pointer;
+  display: grid; place-items: center;
+  background: color-mix(in srgb, var(--surface) 92%, transparent); color: var(--teal-deep);
+  border: 2px solid var(--mint); box-shadow: 0 6px 16px var(--shadow);
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity .25s, transform .25s, visibility .25s, background .15s;
+}
+.to-top.show { opacity: .85; visibility: visible; transform: none; }
+.to-top:hover { opacity: 1; background: var(--mint-soft); }
+.to-top svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+@media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
+@media (max-width: 720px) { .to-top { width: 42px; height: 42px; bottom: calc(92px + env(safe-area-inset-bottom, 0px)); } }
+
+/* スマホ下部固定ボタン */
+.fixbar { display: none; }
+@media (max-width: 720px) {
+  .fixbar {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(6px);
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+  }
+  .fixbar .btn { min-height: 54px; padding: 0 10px; font-size: .98rem; }
+  body { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap head-row">
+    <nav class="gnav l" aria-label="メインメニュー">
+      <a href="#top">TOP<small>トップ</small></a>
+      <a href="#about">ABOUT<small>私たちについて</small></a>
+      <a href="#service">SERVICE<small>事業内容</small></a>
+    </nav>
+    <a class="logo" href="#top" aria-label="株式会社筑糸建設 トップへ">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M5 20 L20 7 L35 20" fill="none" stroke="var(--teal)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M10 18 V33 H30 V18" fill="none" stroke="var(--teal)" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M16 33 V25 H24 V33" fill="var(--yellow)" stroke="var(--teal)" stroke-width="2.4" stroke-linejoin="round"/>
+      </svg>
+      <small>株式会社</small>
+      <strong>筑糸建設</strong>
+    </a>
+    <div class="head-r">
+      <nav class="gnav" aria-label="サブメニュー">
+        <a href="#works">WORKS<small>施工実績</small></a>
+        <a href="#company">COMPANY<small>会社概要</small></a>
+      </nav>
+      <div class="head-tel"><small>お電話</small><b>092-725-7192</b></div>
+      <a class="btn btn-cta" href="#contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+        お問い合わせ
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" data-deco="tl br">
+    <div class="wrap">
+      <div class="hero-frame">
+        <div class="wf">
+          <div class="wf-in slides" id="slides" aria-roledescription="スライドショー" aria-label="施工実績の写真">
+            <figure class="slide on" style="--pos: center 72%; --mpos: 62% center" data-cap="照葉けいあいホーム 新築工事"><img src="img/hero-1.jpg" alt="青空の下に建つ照葉けいあいホームの外観" width="1800" height="1201"></figure>
+            <figure class="slide" style="--pos: center 62%; --mpos: 45% center" data-cap="いきいき保育園 新築工事"><img src="img/ikiiki-1.jpg" alt="夕方のいきいき保育園の外観" width="1400" height="923"></figure>
+            <figure class="slide" style="--pos: center 58%; --mpos: 40% center" data-cap="照葉けいあいホーム 新築工事"><img src="img/hero-2.jpg" alt="木越しに見る照葉けいあいホームの全景" width="1800" height="1201"></figure>
+            <figure class="slide" style="--pos: center 42%; --mpos: 50% center" data-cap="市営松崎住宅2棟 外壁改修工事"><img src="img/matsuzaki-1.jpg" alt="外壁改修後の市営松崎住宅の正面" width="1400" height="1050"></figure>
+            <figure class="slide" style="--pos: center 62%; --mpos: 55% center" data-cap="照葉けいあいホーム 新築工事"><img src="img/hero-3.jpg" alt="木々に囲まれた照葉けいあいホームの入口" width="1800" height="1200"></figure>
+          </div>
+        </div>
+        <ul class="hero-list" aria-label="主な工事">
+          <li>学校工事</li>
+          <li>社会福祉施設</li>
+          <li>解体工事</li>
+        </ul>
+        <h1 class="hero-copy"><span class="hc-en">FUKUOKA SINCE 1997</span><span class="hc-line">福岡の学びと暮らしの場を</span><br><span class="hc-line">確かな技術でつくります</span></h1>
+      </div>
+      <div class="slide-bar">
+        <p class="slide-cap" id="slide-cap" aria-live="polite"><span>WORKS</span>照葉けいあいホーム 新築工事</p>
+        <div class="slide-ctrl">
+          <button type="button" class="sbtn" id="s-prev" aria-label="前の写真"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <div class="dots" id="dots"></div>
+          <button type="button" class="sbtn" id="s-next" aria-label="次の写真"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+          <button type="button" class="sbtn" id="s-pause" aria-label="スライドを一時停止"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M9 6v12M15 6v12"/><path class="i-play" d="M8 5v14l11-7z"/></svg></button>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-cta" href="#contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+          お問い合わせ・お見積もり
+        </a>
+        <a class="btn btn-line" href="#works">施工実績を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding-top:40px">
+    <div class="wrap about">
+      <div class="about-pics">
+        <a class="apic" href="#work-ikiiki" aria-label="いきいき保育園の施工実績を見る"><div class="wf"><img src="img/ikiiki-2.jpg" alt=""></div><span>NURSERY SCHOOL<small>施工実績を見る →</small></span></a>
+        <a class="apic" href="#work-teriha" aria-label="照葉けいあいホームの施工実績を見る"><div class="wf"><img src="img/teriha-4.jpg" alt=""></div><span>WELFARE FACILITY<small>施工実績を見る →</small></span></a>
+        <a class="apic" href="#work-matsuzaki" aria-label="市営松崎住宅の施工実績を見る"><div class="wf"><img src="img/matsuzaki-1.jpg" alt=""></div><span>RENOVATION<small>施工実績を見る →</small></span></a>
+      </div>
+      <div>
+        <h2><span>筑糸建設は、学校・福祉施設・</span><br><span>公営住宅の工事を手がける</span><br><span>福岡の建設会社です。</span></h2>
+        <p>平成9年の創立以来、福岡市内の小学校・中学校・高等学校の耐震改修や外壁改修、保育園や福祉ホームの新築、団地や公共施設の解体まで、地域の暮らしに欠かせない建物に携わってきました。</p>
+        <p>一級建築士・一級建築施工管理技士など国家資格を持つ技術者が、設計の視点と現場管理の両面から、一つひとつの工事をていねいに進めます。</p>
+        <div class="facts">
+          <div class="fact"><b>1997</b><span>創立（平成9年）</span></div>
+          <div class="fact"><b>11<small>業種</small></b><span>特定建設業の許可</span></div>
+          <div class="fact"><b>5<small>名</small></b><span>有資格の技術者</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="town wrap" aria-hidden="true">
+    <svg viewBox="0 0 1200 170" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="win-w" width="22" height="22" patternUnits="userSpaceOnUse"><rect x="6" y="6" width="10" height="10" rx="3" fill="#FFFFFF" fill-opacity=".8"/></pattern>
+        <pattern id="win-g" width="22" height="22" patternUnits="userSpaceOnUse"><rect x="6" y="6" width="10" height="10" rx="3" fill="#9ABE74"/></pattern>
+      </defs>
+      <!-- 浮かぶ角丸 -->
+      <rect x="103" y="28" width="14" height="14" rx="3" fill="#EEEFAF" transform="rotate(45 110 35)"/>
+      <rect x="323" y="40" width="12" height="12" rx="3" fill="#9ABE74" fill-opacity=".7" transform="rotate(45 329 46)"/>
+      <rect x="683" y="24" width="16" height="16" rx="4" fill="#A6CEC1" transform="rotate(45 691 32)"/>
+      <rect x="1043" y="34" width="12" height="12" rx="3" fill="#68BC83" fill-opacity=".7" transform="rotate(45 1049 40)"/>
+      <!-- 家 -->
+      <rect x="40" y="100" width="90" height="60" rx="6" fill="#A6CEC1"/>
+      <path d="M30 106 L85 64 L140 106 Z" fill="#648B45" stroke="#648B45" stroke-width="6" stroke-linejoin="round"/>
+      <rect x="75" y="126" width="20" height="34" rx="4" fill="#EEEFAF"/>
+      <!-- 学校 -->
+      <rect x="150" y="50" width="120" height="110" rx="10" fill="#9ABE74"/>
+      <circle cx="210" cy="70" r="9" fill="#EEEFAF"/>
+      <rect x="154" y="88" width="110" height="66" fill="url(#win-w)"/>
+      <!-- 小さな建物 -->
+      <rect x="290" y="100" width="70" height="60" rx="8" fill="#EEEFAF"/>
+      <rect x="302" y="114" width="16" height="16" rx="4" fill="#9ABE74"/>
+      <rect x="332" y="114" width="16" height="16" rx="4" fill="#9ABE74"/>
+      <!-- 木 -->
+      <rect x="382" y="136" width="6" height="24" rx="3" fill="#648B45"/>
+      <circle cx="385" cy="122" r="22" fill="#68BC83"/>
+      <!-- 集合住宅 -->
+      <rect x="430" y="25" width="110" height="135" rx="10" fill="#A6CEC1"/>
+      <rect x="440" y="44" width="88" height="110" fill="url(#win-w)"/>
+      <!-- 保育園（大きな片流れ屋根） -->
+      <rect x="560" y="82" width="150" height="78" rx="8" fill="#68BC83"/>
+      <path d="M548 86 L722 64" stroke="#648B45" stroke-width="10" stroke-linecap="round"/>
+      <rect x="572" y="110" width="132" height="44" fill="url(#win-w)"/>
+      <!-- 木 -->
+      <rect x="735" y="140" width="6" height="20" rx="3" fill="#648B45"/>
+      <circle cx="738" cy="128" r="18" fill="#9ABE74"/>
+      <!-- 高い集合住宅 -->
+      <rect x="770" y="10" width="90" height="150" rx="10" fill="#9ABE74"/>
+      <rect x="770" y="22" width="88" height="132" fill="url(#win-w)"/>
+      <!-- 福祉施設 -->
+      <rect x="880" y="65" width="120" height="95" rx="8" fill="#EEEFAF"/>
+      <rect x="872" y="57" width="136" height="12" rx="6" fill="#648B45"/>
+      <rect x="880" y="88" width="110" height="66" fill="url(#win-g)"/>
+      <!-- 小さな建物 -->
+      <rect x="1020" y="95" width="80" height="65" rx="8" fill="#A6CEC1"/>
+      <rect x="1034" y="110" width="66" height="44" fill="url(#win-w)"/>
+      <!-- 木 -->
+      <rect x="1142" y="134" width="6" height="26" rx="3" fill="#648B45"/>
+      <circle cx="1145" cy="118" r="26" fill="#68BC83"/>
+      <!-- 地面 -->
+      <rect x="0" y="158" width="1200" height="6" rx="3" fill="#648B45" fill-opacity=".45"/>
+    </svg>
+  </div>
+
+  <section id="service" class="panel">
+    <div class="panel-wrap">
+      <div class="ttl"><span class="en">SERVICE</span><span class="ja">事業内容</span></div>
+      <div class="services">
+        <article class="svc">
+          <div class="svc-pic wf-mint">
+            <span class="svc-num">01</span><span class="svc-en">SCHOOL</span>
+            <svg class="ic" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M8 56h48" stroke="#fff" stroke-width="2.5"/>
+              <path d="M12 56V26l20-14 20 14v30" fill="#fff" stroke="#fff" stroke-width="2.5"/>
+              <rect x="27" y="40" width="10" height="16" fill="var(--yellow)"/>
+              <rect x="17" y="30" width="7" height="7" fill="var(--mint-soft)"/><rect x="40" y="30" width="7" height="7" fill="var(--mint-soft)"/>
+              <rect x="17" y="42" width="7" height="7" fill="var(--mint-soft)"/><rect x="40" y="42" width="7" height="7" fill="var(--mint-soft)"/>
+              <circle cx="32" cy="27" r="4" fill="var(--yellow)"/>
+            </svg>
+          </div>
+          <h3>学校工事</h3>
+          <p>小学校・中学校・高等学校の校舎や体育館を改修します。学校生活への影響に配慮して工事を進めます。</p>
+          <ul><li>耐震改修</li><li>外壁改修</li><li>大規模改修</li></ul>
+        </article>
+        <article class="svc">
+          <div class="svc-pic wf-mint">
+            <span class="svc-num">02</span><span class="svc-en">WELFARE</span>
+            <svg class="ic" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M6 30 32 10l26 20" stroke="#fff" stroke-width="3"/>
+              <path d="M13 26v30h38V26" fill="#fff" stroke="#fff" stroke-width="2.5"/>
+              <path d="M32 47s-9-5.5-9-11a4.6 4.6 0 0 1 9-1.6 4.6 4.6 0 0 1 9 1.6c0 5.5-9 11-9 11z" fill="var(--yellow)"/>
+            </svg>
+          </div>
+          <h3>社会福祉施設</h3>
+          <p>保育園や福祉ホームなど、子どもや高齢の方が毎日過ごす施設を新築します。</p>
+          <ul><li>保育園</li><li>福祉ホーム</li><li>新築工事</li></ul>
+        </article>
+        <article class="svc">
+          <div class="svc-pic wf-mint">
+            <span class="svc-num">03</span><span class="svc-en">DEMOLITION</span>
+            <svg class="ic" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M6 56h52" stroke="#fff" stroke-width="2.5"/>
+              <rect x="10" y="30" width="20" height="26" fill="#fff"/>
+              <path d="M34 56V44l8-4 8 4v12" fill="var(--mint-soft)"/>
+              <path d="M36 12 54 20" stroke="#fff" stroke-width="3"/>
+              <path d="M45 16v10" stroke="#fff" stroke-width="2.5"/>
+              <circle cx="45" cy="31" r="5" fill="var(--yellow)"/>
+              <rect x="14" y="35" width="5" height="5" fill="var(--mint-soft)"/><rect x="21" y="35" width="5" height="5" fill="var(--mint-soft)"/>
+            </svg>
+          </div>
+          <h3>解体工事</h3>
+          <p>団地や公共施設など、大規模な建物の解体工事にも対応します。</p>
+          <ul><li>集合住宅</li><li>公共施設</li></ul>
+        </article>
+        <article class="svc">
+          <div class="svc-pic wf-mint">
+            <span class="svc-num">04</span><span class="svc-en">RENOVATION</span>
+            <svg class="ic" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M6 58h40" stroke="#fff" stroke-width="2.5"/>
+              <rect x="10" y="10" width="28" height="48" fill="#fff"/>
+              <rect x="15" y="16" width="7" height="6" fill="var(--mint-soft)"/><rect x="26" y="16" width="7" height="6" fill="var(--mint-soft)"/>
+              <rect x="15" y="28" width="7" height="6" fill="var(--mint-soft)"/><rect x="26" y="28" width="7" height="6" fill="var(--mint-soft)"/>
+              <path d="M44 14h12v8H44z" fill="var(--yellow)"/>
+              <path d="M50 22v20" stroke="#fff" stroke-width="3"/>
+              <path d="M44 42h12" stroke="#fff" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h3>改修・その他工事</h3>
+          <p>公営住宅や消防署の外壁改修、駅の高架下通路の改築など、公共建築の工事を行います。</p>
+          <ul><li>外壁改修</li><li>防水・塗装</li><li>公共建築</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="works" data-deco="tl br">
+    <div class="wrap">
+      <div class="ttl"><span class="en">WORKS</span><span class="ja">施工実績</span></div>
+      <div class="projects">
+        <article class="proj" id="work-teriha">
+          <div class="proj-photos">
+            <div class="proj-frame"><img class="proj-main" src="img/teriha-1.jpg" alt="照葉けいあいホームの外観" width="1400" height="934"></div>
+            <div class="thumbs" role="group" aria-label="照葉けいあいホームの写真を選ぶ">
+              <button type="button" class="on" aria-pressed="true" data-src="img/teriha-1.jpg" data-alt="照葉けいあいホームの外観"><img src="img/teriha-1.jpg" alt="外観" loading="lazy"></button>
+              <button type="button" aria-pressed="false" data-src="img/teriha-2.jpg" data-alt="道路から見た照葉けいあいホームの全景"><img src="img/teriha-2.jpg" alt="全景" loading="lazy"></button>
+              <button type="button" aria-pressed="false" data-src="img/teriha-3.jpg" data-alt="コンクリート壁の施設名サイン"><img src="img/teriha-3.jpg" alt="サイン" loading="lazy"></button>
+              <button type="button" aria-pressed="false" data-src="img/teriha-4.jpg" data-alt="キッチンと食堂のある共用スペース"><img src="img/teriha-4.jpg" alt="共用スペース" loading="lazy"></button>
+              <button type="button" aria-pressed="false" data-src="img/teriha-5.jpg" data-alt="ベッドと洗面台のある個室"><img src="img/teriha-5.jpg" alt="個室" loading="lazy"></button>
+              <button type="button" aria-pressed="false" data-src="img/teriha-6.jpg" data-alt="木の建具が並ぶ明るい廊下"><img src="img/teriha-6.jpg" alt="廊下" loading="lazy"></button>
+            </div>
+          </div>
+          <div class="proj-body">
+            <span class="proj-no">01</span>
+            <span class="tag">社会福祉施設 ／ 新築工事</span>
+            <h3>照葉けいあいホーム 新築工事</h3>
+            <p>福岡市東区・照葉（アイランドシティ）に建つ2階建ての福祉施設です。木目を生かした明るい共用スペースや、壁の色を部屋ごとに変えた個室など、入居される方が落ち着いて過ごせる内装に仕上げました。</p>
+          </div>
+        </article>
+
+        <article class="proj" id="work-ikiiki">
+          <div class="proj-photos">
+            <div class="proj-frame"><img class="proj-main" src="img/ikiiki-1.jpg" alt="夕方のいきいき保育園の外観" width="1400" height="923"></div>
+            <div class="thumbs" role="group" aria-label="いきいき保育園の写真を選ぶ">
+              <button type="button" class="on" aria-pressed="true" data-src="img/ikiiki-1.jpg" data-alt="夕方のいきいき保育園の外観"><img src="img/ikiiki-1.jpg" alt="外観" loading="lazy"></button>
+              <button type="button" aria-pressed="false" data-src="img/ikiiki-2.jpg" data-alt="木の天井と柱が続くいきいき保育園の軒下"><img src="img/ikiiki-2.jpg" alt="軒下" loading="lazy"></button>
+            </div>
+          </div>
+          <div class="proj-body">
+            <span class="proj-no">02</span>
+            <span class="tag">社会福祉施設 ／ 新築工事</span>
+            <h3>いきいき保育園 新築工事</h3>
+            <p>大きく張り出した屋根の下に、木の柱と板張りの天井が続く園舎です。園舎の前には、ゆったりとした広い軒下が続きます。</p>
+          </div>
+        </article>
+
+        <article class="proj" id="work-matsuzaki">
+          <div class="proj-photos">
+            <div class="proj-frame"><img class="proj-main" src="img/matsuzaki-1.jpg" alt="外壁改修後の市営松崎住宅の正面" width="1400" height="1050"></div>
+            <div class="thumbs" role="group" aria-label="市営松崎住宅の写真を選ぶ">
+              <button type="button" class="on" aria-pressed="true" data-src="img/matsuzaki-1.jpg" data-alt="外壁改修後の市営松崎住宅の正面"><img src="img/matsuzaki-1.jpg" alt="正面" loading="lazy"></button>
+              <button type="button" aria-pressed="false" data-src="img/matsuzaki-2.jpg" data-alt="市営松崎住宅の側面"><img src="img/matsuzaki-2.jpg" alt="側面" loading="lazy"></button>
+              <button type="button" aria-pressed="false" data-src="img/matsuzaki-3.jpg" data-alt="見上げた市営松崎住宅の外壁"><img src="img/matsuzaki-3.jpg" alt="外壁" loading="lazy"></button>
+              <button type="button" aria-pressed="false" data-src="img/matsuzaki-4.jpg" data-alt="丸窓のある市営松崎住宅のエントランス"><img src="img/matsuzaki-4.jpg" alt="エントランス" loading="lazy"></button>
+            </div>
+          </div>
+          <div class="proj-body">
+            <span class="proj-no">03</span>
+            <span class="tag">公営住宅 ／ 外壁改修工事</span>
+            <h3>令和5年度 市営松崎住宅2棟 外壁改修工事</h3>
+            <p>市営住宅2棟の外壁を改修しました。高層の集合住宅の外壁全体を、きれいに塗り替えています。</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="worklist">
+        <div>
+          <div class="wl-group">
+            <h3>学校工事</h3>
+            <ul>
+              <li>西陵小学校校舎 耐震改修工事</li>
+              <li>賀茂小学校校舎 耐震改修工事</li>
+              <li>南当人町小学校校舎 内部改造その他工事</li>
+              <li>西新小学校校舎 その他外壁改修工事</li>
+              <li>城浜小学校校舎 その他外壁改修工事</li>
+              <li>板付小学校校舎 その他外壁改修工事</li>
+              <li>長丘中学校校舎 その他外壁改修工事</li>
+              <li>玄洋高等学校体育館他 大規模改修工事</li>
+              <li>若久特別支援学校校舎 外壁改修その他工事</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="wl-group">
+            <h3>社会福祉法人</h3>
+            <ul><li>いきいき保育園 新築工事</li><li>照葉けいあいホーム 新築工事</li></ul>
+          </div>
+          <div class="wl-group">
+            <h3>公営住宅</h3>
+            <ul><li>令和5年度 市営松崎住宅2棟 外壁改修工事</li></ul>
+          </div>
+          <div class="wl-group">
+            <h3>解体工事</h3>
+            <ul><li>学校給食センター箱崎支所 解体工事</li><li>弥永住宅44棟外1棟 解体工事</li></ul>
+          </div>
+          <div class="wl-group">
+            <h3>その他工事</h3>
+            <ul><li>博多駅高架下歩行者通路 改築工事</li><li>早良消防署その他 外壁改修工事</li><li>博多せんしょう 外壁改修工事</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flow" class="panel">
+    <div class="panel-wrap">
+      <div class="ttl"><span class="en">FLOW</span><span class="ja">ご依頼の流れ</span></div>
+      <ol class="flow">
+        <li>
+          <span class="flow-ic" aria-hidden="true"><svg viewBox="0 0 64 64">
+            <path d="M34 12h20a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4h-8l-6 6v-6h-6a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4z" class="f-y"/>
+            <circle cx="38" cy="22" r="1.8" class="f-d"/><circle cx="44" cy="22" r="1.8" class="f-d"/><circle cx="50" cy="22" r="1.8" class="f-d"/>
+            <path d="M14 22c2-2 6-2 7 1l2 6c.5 2-.5 3.5-2 4.5 2 5 5.5 8.5 10.5 10.5 1-1.5 2.5-2.5 4.5-2l6 2c3 1 3 5 1 7-3 3-7 4-11 2.5C22 50 14 42 11.5 32 10 28 11 24.5 14 22z" class="f-m"/>
+          </svg></span>
+          <span class="flow-no">STEP 01</span>
+          <h3>お問い合わせ</h3><p>お電話かフォームで<br>ご連絡ください。</p>
+        </li>
+        <li>
+          <span class="flow-ic" aria-hidden="true"><svg viewBox="0 0 64 64">
+            <path d="M8 30 26 16l18 14" class="s"/>
+            <path d="M12 28v20h28V28" class="f-m"/>
+            <rect x="22" y="36" width="8" height="12" rx="1.5" class="f-y"/>
+            <circle cx="44" cy="40" r="9" class="f-w"/>
+            <path d="m50.5 46.5 7 7" class="s"/>
+          </svg></span>
+          <span class="flow-no">STEP 02</span>
+          <h3>現地調査</h3><p>担当者が伺い、建物と<br>ご要望を確認します。</p>
+        </li>
+        <li>
+          <span class="flow-ic" aria-hidden="true"><svg viewBox="0 0 64 64">
+            <path d="M16 8h24l10 10v38H16z" class="f-w"/>
+            <path d="M40 8v10h10" class="s"/>
+            <path d="M22 26h20M22 33h20M22 40h12" class="s thin"/>
+            <circle cx="44" cy="46" r="10" class="f-y"/>
+            <path d="m40 41 4 5 4-5M44 46v6M40.5 48h7" class="s thin"/>
+          </svg></span>
+          <span class="flow-no">STEP 03</span>
+          <h3>お見積もり</h3><p>工事内容と金額を<br>書面でご提示します。</p>
+        </li>
+        <li>
+          <span class="flow-ic" aria-hidden="true"><svg viewBox="0 0 64 64">
+            <path d="M12 40c0-12 9-22 20-22s20 10 20 22z" class="f-y"/>
+            <path d="M28 18.5V12h8v6.5" class="f-m"/>
+            <path d="M32 18v22" class="s thin"/>
+            <rect x="8" y="40" width="48" height="7" rx="3.5" class="f-m"/>
+          </svg></span>
+          <span class="flow-no">STEP 04</span>
+          <h3>ご契約・着工</h3><p>有資格の技術者が<br>工程と安全を管理します。</p>
+        </li>
+        <li>
+          <span class="flow-ic" aria-hidden="true"><svg viewBox="0 0 64 64">
+            <path d="M6 30 28 12l22 18" class="s"/>
+            <path d="M11 27v25h34V27" class="f-m"/>
+            <rect x="23" y="36" width="10" height="16" rx="1.5" class="f-w"/>
+            <circle cx="48" cy="44" r="11" class="f-y"/>
+            <path d="m42.5 44 4 4 7-8" class="s thin"/>
+          </svg></span>
+          <span class="flow-no">STEP 05</span>
+          <h3>完成・お引き渡し</h3><p>仕上がりを一緒に<br>確認してお渡しします。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="wf-mint cta-box">
+        <span class="en">CONTACT</span>
+        <h2>工事のご相談・お見積もりはこちら</h2>
+        <p>学校・福祉施設・解体工事など、まずはお気軽にお問い合わせください。</p>
+        <div class="cta-row">
+          <div class="cta-tel"><small>お電話</small><b>092-725-7192</b></div>
+          <a class="btn btn-cta" href="#contact">お問い合わせ先を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="company" style="padding-top:24px" data-deco="tl br">
+    <div class="wrap">
+      <div class="ttl"><span class="en">COMPANY</span><span class="ja">会社概要</span></div>
+      <div class="company">
+        <div>
+          <dl class="info">
+            <div><dt>会社名</dt><dd>株式会社筑糸建設</dd></div>
+            <div><dt>代表者</dt><dd>代表取締役　田村 春久</dd></div>
+            <div><dt>創立</dt><dd>平成9年（1997年）8月12日</dd></div>
+            <div><dt>本店所在地</dt><dd>福岡市中央区西中洲12-13-207</dd></div>
+            <div><dt>電話・FAX</dt><dd>TEL 092-725-7192 ／ FAX 092-725-7193</dd></div>
+            <div><dt>資本金</dt><dd>4,500万円</dd></div>
+            <div><dt>営業種目</dt><dd>建築一式工事</dd></div>
+            <div><dt>建設業許可</dt><dd>福岡県知事許可（特-4）第90906号
+              <div class="kinds"><span>建築工事業</span><span>大工工事業</span><span>とび・土工工事業</span><span>屋根工事業</span><span>鋼構造物工事業</span><span>板金工事業</span><span>塗装工事業</span><span>防水工事業</span><span>内装仕上工事業</span><span>建具工事業</span><span>解体工事業</span></div>
+            </dd></div>
+            <div><dt>加入団体</dt><dd>一般社団法人 福岡防災機構</dd></div>
+            <div><dt>関連会社</dt><dd>大社建設株式会社</dd></div>
+            <div><dt>主要取引金融機関</dt><dd>西日本シティ銀行 赤坂門支店 ／ 福岡信用金庫 本店</dd></div>
+            <div><dt>認証取得</dt><dd>エコアクション21（登録番号 0005038）</dd></div>
+          </dl>
+          <div class="access">
+            <div class="access-txt">
+              <h3>ACCESS</h3>
+              <p>福岡市中央区西中洲12-13-207<br>天神・中洲エリアにあります。</p>
+              <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E8%A5%BF%E4%B8%AD%E6%B4%B212-13" target="_blank" rel="noopener">地図を開く</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="panel">
+    <div class="panel-wrap">
+      <div class="ttl"><span class="en">CONTACT</span><span class="ja">お問い合わせ</span></div>
+      <div class="contact contact-simple">
+        <p class="contact-lead">工事のご相談・お見積もりは、お電話またはFAXで受け付けています。<br>学校・福祉施設・解体工事など、まずはお気軽にお問い合わせください。</p>
+        <div class="contact-side">
+          <div class="contact-card">
+            <small>お電話でのお問い合わせ</small>
+            <b id="telnum">092-725-7192</b>
+            <button type="button" class="copy-btn" data-copy="092-725-7192">番号をコピー</button>
+          </div>
+          <div class="contact-card">
+            <small>FAX</small>
+            <b>092-725-7193</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site" data-deco="br">
+  <strong>株式会社筑糸建設</strong>
+  <span>福岡市中央区西中洲12-13-207 ／ TEL 092-725-7192 ／ FAX 092-725-7193</span>
+  <span>© 株式会社筑糸建設</span>
+</footer>
+
+<button type="button" class="to-top" id="to-top" aria-label="ページの先頭に戻る" tabindex="-1">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg>
+</button>
+
+<div class="fixbar" aria-label="お問い合わせボタン">
+  <a class="btn btn-line" href="#contact">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+    電話番号
+  </a>
+  <a class="btn btn-cta" href="#contact">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+    お問い合わせ
+  </a>
+</div>
+
+<script>
+  // 角丸の飾り：指定5色で、45度の角丸四角を角から広がるように並べる
+  (function () {
+    var NS = 'http://www.w3.org/2000/svg';
+    var colors = ['#9ABE74', '#A6CEC1', '#68BC83', '#EEEFAF', '#648B45'];
+    var seed = 7;
+    function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+    function make(corner, idx) {
+      var W = 400, H = 340, step = 62, half = step / 2, size = 34;
+      var svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+      svg.setAttribute('class', 'deco deco-' + corner);
+      svg.setAttribute('aria-hidden', 'true');
+      var ox = corner.charAt(1) === 'l' ? 0 : W, oy = corner.charAt(0) === 't' ? 0 : H;
+      var maxR = 330;
+      // 色は角ごとに2〜3色のグラデーション風に
+      var base = idx % colors.length;
+      for (var j = 0; j * half <= H + half; j++) {
+        for (var i = 0; i * step <= W + step; i++) {
+          var cx = i * step + (j % 2 ? half : 0), cy = j * half;
+          var dist = Math.hypot(cx - ox, cy - oy);
+          var p = Math.pow(Math.max(0, 1 - dist / maxR), 0.7);
+          if (rnd() > p * 1.05) continue;
+          var r = document.createElementNS(NS, 'rect');
+          r.setAttribute('x', cx - size / 2); r.setAttribute('y', cy - size / 2);
+          r.setAttribute('width', size); r.setAttribute('height', size); r.setAttribute('rx', 7);
+          r.setAttribute('transform', 'rotate(45 ' + cx + ' ' + cy + ')');
+          var c = colors[(base + Math.floor(dist / 120) + (rnd() < .25 ? 1 : 0)) % colors.length];
+          r.setAttribute('fill', c);
+          r.setAttribute('fill-opacity', (0.22 + rnd() * 0.33).toFixed(2));
+          svg.appendChild(r);
+        }
+      }
+      return svg;
+    }
+    var n = 0;
+    document.querySelectorAll('[data-deco]').forEach(function (sec) {
+      sec.getAttribute('data-deco').split(' ').forEach(function (c) { sec.insertBefore(make(c, n++), sec.firstChild); });
+    });
+  })();
+
+  // トップに戻るボタン：少しスクロールしたら表示
+  (function () {
+    var b = document.getElementById('to-top');
+    function upd() {
+      var on = (window.scrollY || document.documentElement.scrollTop) > 500;
+      b.classList.toggle('show', on);
+      b.tabIndex = on ? 0 : -1;
+    }
+    window.addEventListener('scroll', upd, { passive: true });
+    upd();
+    b.addEventListener('click', function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  })();
+
+  // トップのスライドショー
+  (function () {
+    var slides = Array.prototype.slice.call(document.querySelectorAll('#slides .slide'));
+    var dotsBox = document.getElementById('dots'), cap = document.getElementById('slide-cap');
+    var pauseBtn = document.getElementById('s-pause'), frame = document.querySelector('.hero');
+    var cur = 0, timer = null, paused = false, hover = false;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var dots = slides.map(function (s, i) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.setAttribute('aria-label', (i + 1) + '枚目の写真');
+      b.addEventListener('click', function () { go(i); restart(); });
+      dotsBox.appendChild(b); return b;
+    });
+    function go(i) {
+      cur = (i + slides.length) % slides.length;
+      slides.forEach(function (s, k) { s.classList.toggle('on', k === cur); s.setAttribute('aria-hidden', k === cur ? 'false' : 'true'); });
+      dots.forEach(function (d, k) { d.setAttribute('aria-current', k === cur ? 'true' : 'false'); });
+      cap.innerHTML = '<span>WORKS</span>' + slides[cur].getAttribute('data-cap');
+    }
+    function restart() {
+      clearInterval(timer);
+      if (!paused && !hover) timer = setInterval(function () { go(cur + 1); }, 5500);
+    }
+    function setPaused(p) {
+      paused = p; pauseBtn.classList.toggle('paused', p);
+      pauseBtn.setAttribute('aria-label', p ? 'スライドを再生' : 'スライドを一時停止');
+      restart();
+    }
+    document.getElementById('s-prev').addEventListener('click', function () { go(cur - 1); restart(); });
+    document.getElementById('s-next').addEventListener('click', function () { go(cur + 1); restart(); });
+    pauseBtn.addEventListener('click', function () { setPaused(!paused); });
+    var fr = document.querySelector('.hero-frame');
+    fr.addEventListener('mouseenter', function () { hover = true; restart(); });
+    fr.addEventListener('mouseleave', function () { hover = false; restart(); });
+    var sx = null;
+    fr.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+    fr.addEventListener('touchend', function (e) {
+      if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; sx = null;
+      if (Math.abs(dx) > 40) { go(cur + (dx < 0 ? 1 : -1)); restart(); }
+    });
+    go(0);
+    setPaused(reduce);
+  })();
+
+  document.querySelectorAll('.proj').forEach(function (p) {
+    var main = p.querySelector('.proj-main');
+    p.querySelectorAll('.thumbs button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        main.src = b.getAttribute('data-src');
+        main.alt = b.getAttribute('data-alt');
+        p.querySelectorAll('.thumbs button').forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); });
+        b.classList.add('on'); b.setAttribute('aria-pressed', 'true');
+      });
+    });
+  });
+  document.querySelectorAll('.copy-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-copy');
+      var ok = function () { b.textContent = 'コピーしました'; setTimeout(function(){ b.textContent = '番号をコピー'; }, 2000); };
+      try { navigator.clipboard.writeText(t).then(ok, selectTel); } catch (e) { selectTel(); }
+    });
+  });
+  function selectTel() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('telnum'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+  }
+</script>
+
+</body>
+</html>
