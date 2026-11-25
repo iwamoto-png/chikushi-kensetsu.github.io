@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light only">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="福岡市中央区の建設会社、株式会社筑糸建設。学校工事・社会福祉施設の新築・解体工事・改修工事など、建築一式工事を行っています。">
 <style>
@@ -24,6 +25,7 @@ img { max-width: 100%; }
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
 <style>
 /* Layout: 白い地に角丸の飾り。写真は淡い色のフチの角丸フレーム。英字見出し＋小さな和文。ボタンは濃い緑の丸いピルに統一し、ヘッダーとスマホ下部に常に表示。 */
+/* 配色はライトのみ（スマホがダーク設定でも白い背景で表示） */
 /* 指定カラー：#648B45 / #9ABE74 / #A6CEC1 / #68BC83 / #EEEFAF */
 :root {
   --bg: #FFFFFF;         /* 背景は白 */
@@ -46,27 +48,11 @@ img { max-width: 100%; }
   --cta-hover: #46672E;
   --on-cta: #FFFFFF;
   --shadow: rgba(77, 110, 51, .14);
+  color-scheme: light only;
   --en: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   --jp: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
   --wrap: 1120px;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #151B12; --grid: #1E271B; --surface: #1C2519; --frame: #212B1E; --fg: #E8EEE1; --muted: #A9B7A0;
-    --teal: #B4D294; --teal-deep: #C3DCA8; --mint: #5D7F43; --mint-soft: #223024; --sage: #4F7A6C;
-    --panel: #22261A; --pink: #7FCB96; --yellow: #EEEFAF; --on-mint: #F1F6EA;
-    --line: #2F3B2A; --cta: #9ABE74; --cta-hover: #ADCB8C; --on-cta: #1A2512; --shadow: rgba(0, 0, 0, .35);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #151B12; --grid: #1E271B; --surface: #1C2519; --frame: #212B1E; --fg: #E8EEE1; --muted: #A9B7A0;
-  --teal: #B4D294; --teal-deep: #C3DCA8; --mint: #5D7F43; --mint-soft: #223024; --sage: #4F7A6C;
-  --panel: #22261A; --pink: #7FCB96; --yellow: #EEEFAF; --on-mint: #F1F6EA;
-  --line: #2F3B2A; --cta: #9ABE74; --cta-hover: #ADCB8C; --on-cta: #1A2512; --shadow: rgba(0, 0, 0, .35);
-  color-scheme: dark;
-}
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -96,8 +82,6 @@ section > .wrap, section > .panel-wrap { position: relative; z-index: 1; }
 .deco-tr { top: 0; right: 0; }
 .deco-bl { bottom: 0; left: 0; }
 .deco-br { bottom: 0; right: 0; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .deco { opacity: .4; } }
-:root[data-theme="dark"] .deco { opacity: .4; }
 @media (max-width: 700px) { .deco { width: 62vw; opacity: .6; } }
 
 /* 英字見出し */
@@ -261,8 +245,9 @@ a.apic:hover span { color: var(--cta); border-color: var(--cta); }
 
 /* SERVICE */
 .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
-/* 絵・見出し・説明・タグの4段。説明の段を伸ばして、タグを各カードの一番下にそろえる */
-.svc { display: grid; gap: 14px; grid-template-rows: auto auto 1fr auto; }
+/* 絵・見出し・説明・タグを縦に積み、タグを各カードの一番下に押し付けて高さをそろえる */
+.svc { display: flex; flex-direction: column; gap: 14px; }
+.svc ul { margin-top: auto !important; }
 .svc-pic { position: relative; aspect-ratio: 5 / 4; display: grid; place-items: center; }
 .svc-pic svg.ic { width: 46%; height: auto; }
 .svc-num { position: absolute; top: 9%; left: 8%; font-family: var(--en); font-size: 1.1rem; color: var(--on-mint); letter-spacing: .1em; line-height: 1; }
@@ -354,8 +339,6 @@ a.apic:hover span { color: var(--cta); border-color: var(--cta); }
 .cta-box h2 { color: var(--on-mint); font-size: clamp(1.25rem, 2.8vw, 1.7rem); letter-spacing: .14em; }
 .cta-box p { color: var(--on-mint); font-size: .95rem; }
 .cta-box .en { font-family: var(--en); font-size: .78rem; letter-spacing: .3em; color: var(--on-mint); background: var(--yellow); padding: 2px 14px; border-radius: 999px; }
-:root[data-theme="dark"] .cta-box .en { color: #26371B; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cta-box .en { color: #26371B; } }
 .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; align-items: center; margin-top: 6px; }
 .cta-tel { background: var(--surface); border-radius: 999px; padding: 8px 30px; display: grid; line-height: 1.4; }
 .cta-tel small { font-size: .7rem; color: var(--muted); }
