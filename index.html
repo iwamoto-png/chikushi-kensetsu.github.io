@@ -261,7 +261,8 @@ a.apic:hover span { color: var(--cta); border-color: var(--cta); }
 
 /* SERVICE */
 .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
-.svc { display: grid; gap: 14px; align-content: start; }
+/* 絵・見出し・説明・タグの4段。説明の段を伸ばして、タグを各カードの一番下にそろえる */
+.svc { display: grid; gap: 14px; grid-template-rows: auto auto 1fr auto; }
 .svc-pic { position: relative; aspect-ratio: 5 / 4; display: grid; place-items: center; }
 .svc-pic svg.ic { width: 46%; height: auto; }
 .svc-num { position: absolute; top: 9%; left: 8%; font-family: var(--en); font-size: 1.1rem; color: var(--on-mint); letter-spacing: .1em; line-height: 1; }
